@@ -1,4 +1,4 @@
-calculateMeanSpacing <- function(posData, removeRepeats=TRUE, removeZeroes=TRUE) {
+calculateMeanSpacing <- function(posData, removeRepeats=TRUE, removeZeroes=FALSE) {
 
     n <- nrow(posData)
 
