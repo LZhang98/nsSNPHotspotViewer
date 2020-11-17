@@ -4,7 +4,7 @@ calculateMeanSpacing <- function(posData, removeRepeats=TRUE, removeZeroes=TRUE)
 
     meanSpacing <- vector(mode="integer",length=n)
 
-    for (i in 1:nrow(posData)) {
+    for (i in 1:n) {
 
         pos_list <- strsplit(posData$snp_position_list[i], '\\|')
         if (removeRepeats) {
@@ -28,5 +28,7 @@ calculateMeanSpacing <- function(posData, removeRepeats=TRUE, removeZeroes=TRUE)
     }
 }
 
-msZeroes <- calculateMeanSpacing(snpPositions, removeZeroes=FALSE)
-ms <- calculateMeanSpacing(snpPositions)
+if (FALSE) {
+    msZeroes <- calculateMeanSpacing(snpPositions, removeZeroes=FALSE)
+    ms <- calculateMeanSpacing(snpPositions)
+}
