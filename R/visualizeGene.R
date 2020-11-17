@@ -13,8 +13,17 @@ visualizeGene <- function(gene) {
          yaxt="n",
          frame.plot=FALSE)
 
+    rect(xleft=0,xright=length,ybottom=10,ytop=20,col="gray")
 
+    numLines <- nrow(posTable)
+    sortedPosTable <- posTable[order(posTable$Freq, decreasing=TRUE), ]
+    print(sortedPosTable)
+    palette <- heat.colors(numLines)
 
+    for (i in 1:numLines) {
+        position <- sortedPosTable$positions[i]
+        lines(x=c(position, position),y=c(10,20),col=palette[i])
+    }
 }
 
 if (FALSE) {

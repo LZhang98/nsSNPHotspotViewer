@@ -4,7 +4,7 @@ initializeGene <- function(id, posData) {
 
     positions <- as.integer(unlist(strsplit(geneInfo$snp_position_list, "\\|")))
 
-    posTable <- as.data.frame(table(positions))
+    posTable <- as.data.frame(table(positions),stringsAsFactors=FALSE)
 
     meanSpacing <- calculateMeanSpacing(geneInfo)$meanSpacing
 
@@ -18,5 +18,7 @@ initializeGene <- function(id, posData) {
 if (FALSE) {
     example <- "Potri.001G000800.1.v3.0"
 
-    initializeGene(example, snpPositions)
+    test <- initializeGene(example, snpPositions)
+    t <- test$posTable
+    t$positions
 }
