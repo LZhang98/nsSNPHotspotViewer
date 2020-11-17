@@ -14,7 +14,7 @@ getSNPCounts <- function(posData, removeRepeats=TRUE) {
         }
     }
 
-    result <- data.frame(transcriptID=posData$transcript_id, counts)
+    result <- data.frame(transcriptID=posData$transcript_id, length=posData$gene_length, counts)
 
     return(result)
 }
