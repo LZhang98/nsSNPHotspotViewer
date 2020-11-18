@@ -9,11 +9,11 @@ queryCounts(countsData, minLength = 0, minCounts = 0, sortBy = "counts")
 \arguments{
 \item{countsData}{A dataframe. Output of \code{getSNPCounts}.}
 
-\item{minLength.}{The minimum length of genes to filter by. Default is 0 (removes nothing).}
+\item{minLength}{The minimum length of genes to filter by. Default is 0 (removes nothing).}
 
-\item{minCounts.}{The minimum number of observed SNPs to filter by. Default is 0 (removes nothing).}
+\item{minCounts}{The minimum number of observed SNPs to filter by. Default is 0 (removes nothing).}
 
-\item{sortBy.}{A string that decides the sorting setting of the output. Default is "counts", which
+\item{sortBy}{A string that decides the sorting setting of the output. Default is "counts", which
 will sort the output data frame by decreasing SNP counts. The other option is "length", which
 will sort the output data frame by decreasing gene length, instead. If some other string is put
 in, no sorting will be done.}
