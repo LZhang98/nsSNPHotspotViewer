@@ -18,6 +18,7 @@
 #' plotPopulation(snpPositions)
 #' plotPopulation(snpPositions, removeRepeats=FALSE)
 #'
+#' @import ggplot2
 #' @export
 plotPopulation <- function(posData, removeRepeats=TRUE) {
 

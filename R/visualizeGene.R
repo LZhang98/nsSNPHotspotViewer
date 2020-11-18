@@ -14,6 +14,8 @@
 #' gene <- initializeGene("Potri.001G345300.1.v3.0", snpPositions)
 #' visualizeGene(gene)
 #'
+#' @importFrom grDevices heat.colors
+#' @importFrom graphics lines rect text
 #' @export
 visualizeGene <- function(gene) {
 
