@@ -66,3 +66,5 @@ Printing the attributes of the gene object, we see it has 4 attributes, all of w
 ```{r final}
 visualizeGene(gene)
 ```
+
+If the images do not show up properly, I recommend opening and viewing this file, or executing the appropriate commands, within RStudio.
