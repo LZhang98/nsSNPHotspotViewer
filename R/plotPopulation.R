@@ -17,6 +17,8 @@
 #' @examples
 #' plotPopulation(snpPositions)
 #' plotPopulation(snpPositions, removeRepeats=FALSE)
+#'
+#' @export
 plotPopulation <- function(posData, removeRepeats=TRUE) {
 
     library(ggplot2)

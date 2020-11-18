@@ -13,6 +13,8 @@
 #' @examples
 #' gene <- initializeGene("Potri.001G345300.1.v3.0", snpPositions)
 #' visualizeGene(gene)
+#'
+#' @export
 visualizeGene <- function(gene) {
 
     # Retrieve Gene attributes

@@ -1,0 +1,68 @@
+---
+title: "package_introduction"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{package_introduction}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(nsSNPHotspotViewer)
+```
+
+To demonstrate the basic workflow present in this package, let's use the sample dataset provided and visualize a single gene.
+
+To start, let's take a look at the first few rows of the given `snpPositions` dataset.
+```{r load}
+knitr::kable(snpPositions[1:10,,])
+```
+
+The table lists genes (or transcripts from RNA-Seq), their lengths, and all the SNPs across every member of the population sampled. The SNPs are defined by the position at which their occur. Since multiple individuals in the population may have SNPs that occur at the same position, we may observe the same position index repeated multiple times. For example, the very first row is for a gene named "Potri.001G000100.1.v3.0" of length 843, with 4 observed SNPs at position 116 and 1 observed SNP at 346.
+
+Now that we're oriented with the data, let's see what the entire population looks like:
+```{r plot}
+plotPopulation(snpPositions)
+```
+
+In general, there is a rough positive correlation between the length of the gene and the number of SNPs it contains across the population. This is to be expected, as longer genes would have a probabilistically higher chance of encountering mutations. While this graphic can be used to visualize particularly volatile or stable genes to varying degrees, let's focus on the top right little cluster, as it looks rather interesting.
+
+To do so, we use the `getSNPCounts` and `queryCounts` functions in series to hone in on the top right cluster. Using the above scatter plot as a visual aid, we can set the minimum geneLength to 10000 and the minimum counts to 150. We also choose to sort the results by counts (default)
+
+```{r query}
+countsData <- getSNPCounts(snpPositions)
+topHits <- queryCounts(countsData, 10000, 150)
+knitr::kable(topHits)
+```
+
+We can now choose any one of these genes to visualize. Let's take the ID of the very top hit.
+
+```{r tophit}
+id <- topHits$transcriptID[1]
+id
+```
+
+Let's initialize this as a gene object in preparation for visualization. Note the usage of the original snpPositions dataset as an argument:
+
+```{r init}
+gene <- initializeGene(id, snpPositions)
+
+gene$id
+gene$length
+gene$posTable[1:10,]
+gene$meanSpacing
+class(gene)
+```
+
+Printing the attributes of the gene object, we see it has 4 attributes, all of which will be used for the final graphic. Let's make it now:
+
+```{r final}
+visualizeGene(gene)
+```

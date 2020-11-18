@@ -30,4 +30,5 @@ countsData <- getSNPCounts(snpPositions)
 topHits1 <- queryCounts(countsData, 10000, 150)
 topHits2 <- queryCounts(countsData, 10000, 150, sortBy="length")
 topHits3 <- queryCounts(countsData, 10000, 150, sortBy="asdf")
+
 }

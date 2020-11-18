@@ -22,4 +22,5 @@ redness is a heatmap colour mapping that depicts its relative frequency.
 \examples{
 gene <- initializeGene("Potri.001G345300.1.v3.0", snpPositions)
 visualizeGene(gene)
+
 }

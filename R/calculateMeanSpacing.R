@@ -23,6 +23,8 @@
 #' @examples
 #' ms <- calculateMeanSpacing(snpPositions)
 #' msZeroes <- calculateMeanSpacing(snpPositions, removeZeroes=FALSE)
+#'
+#' @export
 calculateMeanSpacing <- function(posData, removeRepeats=TRUE, removeZeroes=TRUE) {
 
     # Build a vector for storing mean spacing stats for each gene

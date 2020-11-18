@@ -37,4 +37,5 @@ the final graphic.
 \examples{
 example <- "Potri.001G000800.1.v3.0"
 initializeGene(example, snpPositions)
+
 }

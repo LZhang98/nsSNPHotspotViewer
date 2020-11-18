@@ -35,4 +35,5 @@ repeated observations of the same SNP) should be ignored.
 \examples{
 ms <- calculateMeanSpacing(snpPositions)
 msZeroes <- calculateMeanSpacing(snpPositions, removeZeroes=FALSE)
+
 }

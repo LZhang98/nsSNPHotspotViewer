@@ -22,6 +22,7 @@
 #' getSNPCounts(snpPositions)
 #' getSNPCounts(snpPositions, removeRepeats=FALSE)
 #'
+#' @export
 getSNPCounts <- function(posData, removeRepeats=TRUE) {
 
     # build up a vector for counting SNPs in each row

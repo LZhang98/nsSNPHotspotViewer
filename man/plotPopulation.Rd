@@ -27,4 +27,5 @@ the removeRepeats parameter.
 \examples{
 plotPopulation(snpPositions)
 plotPopulation(snpPositions, removeRepeats=FALSE)
+
 }

@@ -26,6 +26,8 @@
 #' @examples
 #' example <- "Potri.001G000800.1.v3.0"
 #' initializeGene(example, snpPositions)
+#'
+#' @export
 initializeGene <- function(id, posData) {
 
     geneInfo <- posData[posData$transcript_id == id, , ]
