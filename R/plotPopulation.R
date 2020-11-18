@@ -1,14 +1,30 @@
+#' Provide a large-scale visualization of the variation in the population represented
+#' by the dataset.
+#'
+#' Outputs a scatterplot using ggplot2 that plots the length of each gene against
+#' the number of SNPs observed on that gene. By default, each position that contains a SNP
+#' is counted once and only once -- repeats are ignored. However, this can be changed using
+#' the removeRepeats parameter.
+#'
+#' @param posData A dataset that contains 3 columns. See \code{?snpPositions} for what this dataset must
+#'     be formatted as. Each row represents a gene, and gene has 3 attributes: its id, its length,
+#'     and the positions of all SNPs observed on it in the population.
+#' @param removeRepeats A boolean specifying whether observed SNPs that share the same position on the
+#'     gene are to be counted more than once. Default is \code{TRUE}.
+#'
+#' @return Produces a scatterplot.
+#'
+#' @examples
+#' plotPopulation(snpPositions)
+#' plotPopulation(snpPositions, removeRepeats=FALSE)
 plotPopulation <- function(posData, removeRepeats=TRUE) {
 
     library(ggplot2)
 
+    # produce SNP count data. removeRepeats argument is used here.
     countsData <- getSNPCounts(posData, removeRepeats)
 
-    asdf <- data.frame(posData$transcript_id, geneLength=posData$gene_length,counts=countsData$counts)
-
-    ggplot(data=asdf) + geom_point(mapping = aes(x = geneLength, y = counts))
-}
-
-if (FALSE) {
-    plotPopulation(snpPositions)
+    # build dataframe for scatterplot, then output
+    plotData <- data.frame(posData$transcript_id, geneLength=posData$gene_length,counts=countsData$counts)
+    ggplot(data=plotData) + geom_point(mapping = aes(x = geneLength, y = counts))
 }

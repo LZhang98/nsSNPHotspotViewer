@@ -3,7 +3,7 @@
 \docType{data}
 \name{snpPositions}
 \alias{snpPositions}
-\title{Non-synonymous coding region SNP Position data from a GWAS experiment.}
+\title{Non-synonymous coding region SNP Position Data from Next Generation Sequencing}
 \format{
 A matrix with columns:
 \describe{
@@ -16,13 +16,14 @@ A matrix with columns:
 }
 }
 \source{
-???
+Provart Lab, Department of Cells and Systems Biology, University of Toronto.
 }
 \usage{
 snpPositions
 }
 \description{
-Where does the data come from?
+Genetic variation data obtained by parsing genomic data (initially stored in Variant Call Format) from
+    RNA-Seq experiments on Poplar individuals.
 }
 \examples{
 \dontrun{snpPositions}

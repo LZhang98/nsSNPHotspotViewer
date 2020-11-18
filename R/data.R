@@ -1,8 +1,9 @@
-#' Non-synonymous coding region SNP Position data from a GWAS experiment.
+#' Non-synonymous coding region SNP Position Data from Next Generation Sequencing
 #'
-#' Where does the data come from?
+#' Genetic variation data obtained by parsing genomic data (initially stored in Variant Call Format) from
+#'     RNA-Seq experiments on Poplar individuals.
 #'
-#' @source ???
+#' @source Provart Lab, Department of Cells and Systems Biology, University of Toronto.
 #'
 #' @format A matrix with columns:
 #' \describe{
