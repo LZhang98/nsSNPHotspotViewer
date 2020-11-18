@@ -4,6 +4,6 @@ citEntry(
   entry    = "Unpublished",
   title    = "nsSNPHotspotViewer",
   author   = "Luke Zhang",
-  note     = "Unpublished"
-  year     = "2020",
+  note     = "Unpublished",
+  year     = "2020"
 )

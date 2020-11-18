@@ -29,5 +29,5 @@ plotPopulation <- function(posData, removeRepeats=TRUE) {
 
     # build dataframe for scatterplot, then output
     plotData <- data.frame(posData$transcript_id, geneLength=posData$gene_length,counts=countsData$counts)
-    ggplot(data=plotData) + geom_point(mapping = aes(x = geneLength, y = counts))
+    ggplot2::ggplot(data=plotData) + geom_point(mapping = aes(x = geneLength, y = counts))
 }
