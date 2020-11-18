@@ -1,0 +1,9 @@
+citHeader("To cite nsSNPHotspotViewer in publications use:")
+
+citEntry(
+  entry    = "Unpublished",
+  title    = "nsSNPHotspotViewer",
+  author   = "Luke Zhang",
+  note     = "Unpublished"
+  year     = "2020",
+)
