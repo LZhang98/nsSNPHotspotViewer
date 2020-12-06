@@ -2,8 +2,11 @@ citHeader("To cite nsSNPHotspotViewer in publications use:")
 
 citEntry(
   entry    = "Unpublished",
-  title    = "nsSNPHotspotViewer",
+  title    = "nsSNPHotspotViewer: Visualizing hotspots of genetic variation in population data",
   author   = "Luke Zhang",
   note     = "Unpublished",
-  year     = "2020"
+  year     = "2020",
+  textVersion = paste(
+"Zhang, L. (2020) nsSNPHotspotViewer: Visualizing hotspots of genetic variation in population data. Unpublished. URL http://github.com/LZhang98/nsSNPHotspotViewer"
+  )
 )
