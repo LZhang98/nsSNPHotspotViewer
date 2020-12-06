@@ -15,8 +15,8 @@
 #' @return Produces a scatterplot, and returns it.
 #'
 #' @examples
-#' plotPopulation(snpPositions)
-#' plotPopulation(snpPositions, removeRepeats=FALSE)
+#' plot <- plotPopulation(snpPositions)
+#' plot2 <- plotPopulation(snpPositions, removeRepeats=FALSE)
 #'
 #' @import ggplot2
 #' @export

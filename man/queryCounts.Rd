@@ -13,10 +13,13 @@ queryCounts(countsData, minLength = 0, minCounts = 0, sortBy = "counts")
 
 \item{minCounts}{The minimum number of observed SNPs to filter by. Default is 0 (removes nothing).}
 
-\item{sortBy}{A string that decides the sorting setting of the output. Default is "counts", which
-will sort the output data frame by decreasing SNP counts. The other option is "length", which
-will sort the output data frame by decreasing gene length, instead. If some other string is put
-in, no sorting will be done.}
+\item{sortBy}{A string that decides the sorting setting of the output. If none of the below arguments
+    are used, use default sorting. Potentional arguments:
+\itemize{
+    \item \code{counts} - The default argument. Sort by decreasing SNP counts.
+    \item \code{length} - Sort by decreasing gene length
+    \item \code{none} - No sorting is performed, and the subset is returned as is.
+}}
 }
 \value{
 A subset of the countsData data frame that satisfies the user inputs.

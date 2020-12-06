@@ -25,7 +25,7 @@ is counted once and only once -- repeats are ignored. However, this can be chang
 the removeRepeats parameter.
 }
 \examples{
-plotPopulation(snpPositions)
-plotPopulation(snpPositions, removeRepeats=FALSE)
+plot <- plotPopulation(snpPositions)
+plot2 <- plotPopulation(snpPositions, removeRepeats=FALSE)
 
 }

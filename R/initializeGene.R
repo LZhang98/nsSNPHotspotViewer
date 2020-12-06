@@ -30,6 +30,11 @@
 #' @export
 initializeGene <- function(id, posData) {
 
+    # Check if id is in posData
+    if (id %in% posData$transcript_id == FALSE) {
+        stop('Given id not found in dataset')
+    }
+
     geneInfo <- posData[posData$transcript_id == id, , ]
 
     positions <- as.integer(unlist(strsplit(geneInfo$snp_position_list, "\\|")))
