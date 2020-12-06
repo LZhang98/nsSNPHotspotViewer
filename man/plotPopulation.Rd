@@ -16,7 +16,7 @@ and the positions of all SNPs observed on it in the population.}
 gene are to be counted more than once. Default is \code{TRUE}.}
 }
 \value{
-Produces a scatterplot.
+Produces a scatterplot, and returns it.
 }
 \description{
 Outputs a scatterplot using ggplot2 that plots the length of each gene against

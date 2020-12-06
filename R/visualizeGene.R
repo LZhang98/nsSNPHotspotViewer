@@ -47,6 +47,6 @@ visualizeGene <- function(gene) {
     }
 
     # Annotate the graphic with a simple statistic
-    annotation <- paste("Average spacing between nsSNPs on this gene = ",spacing, sep="")
+    annotation <- paste("Average spacing between loci = ",spacing, sep="")
     text(x=0, y=5, adj=0, labels=annotation)
 }

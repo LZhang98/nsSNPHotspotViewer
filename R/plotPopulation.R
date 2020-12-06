@@ -12,7 +12,7 @@
 #' @param removeRepeats A boolean specifying whether observed SNPs that share the same position on the
 #'     gene are to be counted more than once. Default is \code{TRUE}.
 #'
-#' @return Produces a scatterplot.
+#' @return Produces a scatterplot, and returns it.
 #'
 #' @examples
 #' plotPopulation(snpPositions)
@@ -32,4 +32,5 @@ plotPopulation <- function(posData, removeRepeats=TRUE) {
         ggplot2::xlab("Gene Length") + ggplot2::ylab("Number of SNPs observed")
     plot <- plot + ggplot2::theme(plot.title = element_text(hjust = 0.5))
     plot
+    return(plot)
 }

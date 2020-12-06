@@ -4,7 +4,7 @@
 \alias{calculateMeanSpacing}
 \title{Calculate the average number of bases between adjacent SNPs.}
 \usage{
-calculateMeanSpacing(posData, removeRepeats = TRUE, removeZeroes = TRUE)
+calculateMeanSpacing(posData, removeRepeats = TRUE)
 }
 \arguments{
 \item{posData}{A dataset that contains 3 columns. See \code{?snpPositions} for what this dataset must
@@ -13,9 +13,6 @@ and the positions of all SNPs observed on it in the population.}
 
 \item{removeRepeats}{A boolean that controls whether the function disregards repeated observations
 (and in turn ignores zero-differences) while parsing. Default is TRUE.}
-
-\item{removeZeroes}{A boolean that controls whether the function, after completing calculations,
-discards averages of 0 (which indicate the gene has a single SNP). Default is TRUE.}
 }
 \value{
 A dataframe of 2 columns:
@@ -27,13 +24,13 @@ A dataframe of 2 columns:
 \description{
 Given a correctly formatted dataset (see \code{?snpPosition}), parse the SNP
 positions for each gene and compute the average number of bases between adjacent
-observed positions. If a gene contains a single SNP, then the mean spacing is
-set to a default value of 0 (which can then be filtered out with \code{removeZeroes}).
-The user can specify whether zero-differences (i.e. the amount of space between two
-repeated observations of the same SNP) should be ignored.
+observed positions. Calculations are padded by inserting fictitious SNPs at the
+beginning and end of a gene (indices 0 and at length + 1). This is to demonstrate the
+sparsity of SNPs on genes with few observed loci. The user can specify whether
+zero-differences (i.e. the amount of space between two repeated observations of
+the same SNP) should be ignored.
 }
 \examples{
 ms <- calculateMeanSpacing(snpPositions)
-msZeroes <- calculateMeanSpacing(snpPositions, removeZeroes=FALSE)
 
 }
