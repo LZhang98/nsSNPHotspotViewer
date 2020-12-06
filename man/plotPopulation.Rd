@@ -20,7 +20,7 @@ Produces a scatterplot.
 }
 \description{
 Outputs a scatterplot using ggplot2 that plots the length of each gene against
-the number of SNPs observed on that gene. By default, each position that contains a SNP
+the number of SNPs observed on that gene. By default, each locus
 is counted once and only once -- repeats are ignored. However, this can be changed using
 the removeRepeats parameter.
 }
