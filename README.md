@@ -68,6 +68,12 @@ other components of the package were written by the author in R.
 
 ## References
 
+McKown A, Klapste J, Guy R, Geraldes A, I Prth, et al (2014).
+Genome‐wide association implicates numerous genes underlying
+ecological trait variation in natural populations of Populus
+trichocarpa. *New Phytologist*, vol 203 .
+<https://doi.org/10.1111/nph.12815>.
+
 R Core Team (2020). R: A language and environment for statistical
 computing. R Foundation for Statistical Computing, Vienna, Austria.
 <https://www.R-project.org/>.

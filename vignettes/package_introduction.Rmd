@@ -1,5 +1,5 @@
 ---
-title: "package_introduction"
+title: "An Introduction and Overview to nsSNPHotspotViewer"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{package_introduction}
@@ -28,7 +28,7 @@ knitr::kable(snpPositions[1:10,,])
 The table lists genes (or transcripts from RNA-Seq), their lengths, and all the SNPs across every member of the population sampled. The SNPs are defined by the position at which their occur. Since multiple individuals in the population may have SNPs that occur at the same position, we may observe the same position index repeated multiple times. For example, the very first row is for a gene named "Potri.001G000100.1.v3.0" of length 843, with 4 observed SNPs at position 116 and 1 observed SNP at 346.
 
 Now that we're oriented with the data, let's see what the entire population looks like:
-```{r plot}
+```{r plot, fig.width=7}
 plotPopulation(snpPositions)
 ```
 
@@ -63,8 +63,18 @@ class(gene)
 
 Printing the attributes of the gene object, we see it has 4 attributes, all of which will be used for the final graphic. Let's make it now:
 
-```{r final}
+```{r final, fig.width=7}
 visualizeGene(gene)
 ```
 
 If the images do not show up properly, I recommend opening and viewing this file, or executing the appropriate commands, within RStudio.
+
+## References
+
+McKown A, Klapste J, Guy R, Geraldes A, I Prth, et al (2014). Genome‐wide association implicates numerous genes underlying ecological trait variation in natural populations of Populus trichocarpa. *New Phytologist*, vol 203 . https://doi.org/10.1111/nph.12815.
+
+R Core Team (2020). R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. https://www.R-project.org/.
+
+Wickham, H. (2016). ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag New York. https://ggplot2.tidyverse.org/.
+
+Wickham, H. and Bryan, J. (2019). *R Packages* (2nd edition). Newton, Massachusetts: O’Reilly Media. https://r-pkgs.org/
