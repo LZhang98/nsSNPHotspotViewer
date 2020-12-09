@@ -10,7 +10,6 @@ test_that("gene intialization works", {
 
 test_that("missing data", {
     example <- "asdf"
-    gene <-
 
     expect_error(initializeGene(example, snpPositions),
                  'Given id not found in dataset')
