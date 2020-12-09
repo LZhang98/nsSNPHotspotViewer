@@ -25,6 +25,8 @@ visualizeGene <- function(gene) {
     length <- gene$length
     spacing <- toString(gene$meanSpacing)
 
+    maxCount <- max(posTable$Freq)
+
     # Plot configurations were obtained from a StackOverflow response:
     # https://stackoverflow.com/questions/1154242/remove-plot-axis-values
     plot(c(0,length), c(0, 30),
@@ -40,10 +42,10 @@ visualizeGene <- function(gene) {
     # Draw lines: the SNPs
     numLines <- nrow(posTable)
     sortedPosTable <- posTable[order(posTable$Freq, decreasing=TRUE), ]
-    palette <- heat.colors(numLines)
+    palette <- heat.colors(maxCount)
     for (i in 1:numLines) {
         position <- sortedPosTable$positions[i]
-        lines(x=c(position, position),y=c(10,20),col=palette[i])
+        lines(x=c(position, position),y=c(10,20),col=palette[sortedPosTable$Freq[i]])
     }
 
     # Annotate the graphic with a simple statistic
