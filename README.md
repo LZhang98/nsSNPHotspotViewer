@@ -30,7 +30,7 @@ descriptions of their level of genetic variation.
 To download the package:
 
     require("devtools")
-    devtools::install_github("LZhang98/nsSNPHotspotViewer",build_vignettes=TRUE)
+    devtools::install_github("LZhang98/nsSNPHotspotViewer", build_vignettes=TRUE)
     library("nsSNPHotspotViewer")
 
 To run the shinyApp:
