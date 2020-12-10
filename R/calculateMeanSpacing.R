@@ -39,9 +39,9 @@ calculateMeanSpacing <- function(posData, removeRepeats=TRUE) {
 
         # usage of unique() function determined by removeRepeats parameter
         if (removeRepeats) {
-            positions <- unique(as.integer(unlist(pos_list)))
+            positions <- sort(unique(as.integer(unlist(pos_list))))
         } else {
-            positions <- as.integer(unlist(pos_list))
+            positions <- sort(as.integer(unlist(pos_list)))
         }
 
         # Padding to calculate distances for SNP loci adjacent to termini of gene
