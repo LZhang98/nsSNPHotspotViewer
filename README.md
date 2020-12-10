@@ -35,7 +35,7 @@ To download the package:
 
 To run the shinyApp:
 
-    Under construction.
+    runViewer()
 
 ## Overview
 
@@ -60,8 +60,8 @@ A pictoral overview of the package workflow is given below:
 
 ## Contributions
 
-The author of the package is Luke Zhang. *plotPopulation* uses the
-`ggplot2` R package’s graphical output. *visualizeGene* uses the
+The author of the package is Luke Zhang. `plotPopulation` uses the
+`ggplot2` R package’s graphical output. `visualizeGene` uses the
 `graphics` R package to produce the visualization. The `snpPositions`
 dataset was produced in an external Python script by the author. All
 other components of the package were written by the author in R.
