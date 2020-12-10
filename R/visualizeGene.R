@@ -31,7 +31,7 @@ visualizeGene <- function(gene) {
     # https://stackoverflow.com/questions/1154242/remove-plot-axis-values
     plot(c(0,length), c(0, 30),
          type="n",
-         xlab="Position", ylab="",
+         xlab="Locus", ylab="",
          main=id,
          yaxt="n",
          frame.plot=FALSE)
