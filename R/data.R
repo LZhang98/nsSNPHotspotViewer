@@ -3,7 +3,7 @@
 #' Genetic variation data obtained by parsing genomic data (initially stored in Variant Call Format) from
 #'     RNA-Seq experiments on Poplar individuals.
 #'
-#' @source Provart Lab, Department of Cells and Systems Biology, University of Toronto.
+#' @source Unpublished toy box data from Provart Lab, Department of Cells and Systems Biology, University of Toronto.
 #'
 #' @format A matrix with columns:
 #' \describe{

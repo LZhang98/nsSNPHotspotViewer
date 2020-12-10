@@ -16,7 +16,7 @@ A matrix with columns:
 }
 }
 \source{
-Provart Lab, Department of Cells and Systems Biology, University of Toronto.
+Unpublished toy box data from Provart Lab, Department of Cells and Systems Biology, University of Toronto.
 }
 \usage{
 snpPositions
