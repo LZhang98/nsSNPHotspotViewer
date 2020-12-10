@@ -26,8 +26,7 @@
 queryCounts <- function(countsData, minLength=0, minCounts=0, sortBy="counts") {
 
     # Check user inputs. Non-fatal, so simply a warning is passed.
-
-    if (!(sortBy %in% c("counts","length","none"))) {
+    if (!(sortBy %in% c("counts", "length", "none"))) {
         sortBy <- "counts"
         warning("Invalid sortBy argument. Default used.")
     }
@@ -52,3 +51,5 @@ queryCounts <- function(countsData, minLength=0, minCounts=0, sortBy="counts") {
         return(qData)
     }
 }
+
+# [END]

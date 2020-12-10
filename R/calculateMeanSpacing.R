@@ -60,3 +60,5 @@ calculateMeanSpacing <- function(posData, removeRepeats=TRUE) {
 
     return(result)
 }
+
+# [END]

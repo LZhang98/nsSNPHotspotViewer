@@ -27,7 +27,7 @@ getSNPCounts <- function(posData, removeRepeats=TRUE) {
 
     # build up a vector for counting SNPs in each row
     n <- nrow(posData)
-    counts <- vector(mode="integer",length=n)
+    counts <- vector(mode="integer", length=n)
     for (i in 1:n) {
 
         # split the position list by the '|' character.
@@ -45,3 +45,5 @@ getSNPCounts <- function(posData, removeRepeats=TRUE) {
     result <- data.frame(transcriptID=posData$transcript_id, length=posData$gene_length, counts)
     return(result)
 }
+
+# [END]

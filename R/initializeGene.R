@@ -35,6 +35,8 @@ initializeGene <- function(id, posData) {
         stop('Given id not found in dataset')
     }
 
+    # Build Gene object attributes
+
     geneInfo <- posData[posData$transcript_id == id, , ]
 
     positions <- as.integer(unlist(strsplit(geneInfo$snp_position_list, "\\|")))

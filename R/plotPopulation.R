@@ -26,11 +26,16 @@ plotPopulation <- function(posData, removeRepeats=TRUE) {
     countsData <- getSNPCounts(posData, removeRepeats)
 
     # build dataframe for scatterplot, then output
-    plotData <- data.frame(posData$transcript_id, geneLength=posData$gene_length,counts=countsData$counts)
+    plotData <- data.frame(posData$transcript_id, geneLength=posData$gene_length,
+                           counts=countsData$counts)
     plot <- ggplot2::ggplot(data=plotData) + geom_point(mapping = aes(x = geneLength, y = counts))
+
+    # axis labels and titles
     plot <- plot + ggplot2::ggtitle("SNP Counts Across the Population") +
         ggplot2::xlab("Gene Length") + ggplot2::ylab("Number of SNPs observed")
     plot <- plot + ggplot2::theme(plot.title = element_text(hjust = 0.5))
     plot
+
+    # return so user does not have to repeatedly call method to produce plot
     return(plot)
 }

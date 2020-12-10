@@ -29,7 +29,7 @@ visualizeGene <- function(gene) {
 
     # Plot configurations were obtained from a StackOverflow response:
     # https://stackoverflow.com/questions/1154242/remove-plot-axis-values
-    plot(c(0,length), c(0, 30),
+    plot(c(0, length), c(0, 30),
          type="n",
          xlab="Locus", ylab="",
          main=id,
@@ -37,7 +37,7 @@ visualizeGene <- function(gene) {
          frame.plot=FALSE)
 
     # Draw rectangle: the gene.
-    rect(xleft=0,xright=length,ybottom=10,ytop=20,col="gray")
+    rect(xleft=0, xright=length, ybottom=10, ytop=20, col="gray")
 
     # Draw lines: the SNPs
     numLines <- nrow(posTable)
@@ -45,7 +45,7 @@ visualizeGene <- function(gene) {
     palette <- rev(heat.colors(maxCount))
     for (i in 1:numLines) {
         position <- sortedPosTable$positions[i]
-        lines(x=c(position, position),y=c(10,20),col=palette[sortedPosTable$Freq[i]])
+        lines(x=c(position, position), y=c(10, 20), col=palette[sortedPosTable$Freq[i]])
     }
 
     # Annotate the graphic with a simple statistic
@@ -57,3 +57,5 @@ visualizeGene <- function(gene) {
            fill=c(palette[1], palette[maxCount %/% 2], palette[maxCount]),
            title="SNP Frequency at Loci")
 }
+
+# [END]
