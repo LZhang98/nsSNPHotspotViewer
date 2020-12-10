@@ -22,7 +22,7 @@ A dataframe of 2 columns:
 }
 }
 \description{
-Given a correctly formatted dataset (see \code{?snpPosition}), parse the SNP
+Given a correctly formatted dataset (see \code{?snpPositions}), parse the SNP
 positions for each gene and compute the average number of bases between adjacent
 observed positions. Calculations are padded by inserting fictitious SNPs at the
 beginning and end of a gene (indices 0 and at length + 1). This is to demonstrate the
