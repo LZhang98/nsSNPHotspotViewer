@@ -63,7 +63,7 @@ class(gene)
 
 Printing the attributes of the gene object, we see it has 4 attributes, all of which will be used for the final graphic. Let's make it now:
 
-```{r final, fig.width=7}
+```{r final, fig.width=7, fig.height=7}
 visualizeGene(gene)
 ```
 

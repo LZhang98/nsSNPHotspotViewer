@@ -84,6 +84,10 @@ Springer-Verlag New York. <https://ggplot2.tidyverse.org/>.
 Wickham, H. and Bryan, J. (2019). *R Packages* (2nd edition). Newton,
 Massachusetts: O’Reilly Media. <https://r-pkgs.org/>
 
+Winston Chang, Joe Cheng, JJ Allaire, Yihui Xie and Jonathan McPherson
+(2020). shiny: Web Application Framework for R. R package version 1.5.0.
+<https://CRAN.R-project.org/package=shiny>
+
 ## Acknowledgements
 
 This package was developed as part of an assessment for 2020 BCB410H:
