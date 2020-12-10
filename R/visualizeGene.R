@@ -42,7 +42,7 @@ visualizeGene <- function(gene) {
     # Draw lines: the SNPs
     numLines <- nrow(posTable)
     sortedPosTable <- posTable[order(posTable$Freq, decreasing=TRUE), ]
-    palette <- heat.colors(maxCount)
+    palette <- rev(heat.colors(maxCount))
     for (i in 1:numLines) {
         position <- sortedPosTable$positions[i]
         lines(x=c(position, position),y=c(10,20),col=palette[sortedPosTable$Freq[i]])
@@ -51,4 +51,9 @@ visualizeGene <- function(gene) {
     # Annotate the graphic with a simple statistic
     annotation <- paste("Average spacing between loci = ",spacing, sep="")
     text(x=0, y=5, adj=0, labels=annotation)
+
+    # Add legend
+    legend(x=0, y=30, legend=c(1, maxCount %/% 2, maxCount),
+           fill=c(palette[1], palette[maxCount %/% 2], palette[maxCount]),
+           title="SNP Frequency at Loci")
 }
